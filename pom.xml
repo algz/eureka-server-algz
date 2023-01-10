@@ -3,7 +3,28 @@
   <parent>
     <groupId>com.algz.cloud</groupId>
     <artifactId>spring-cloud-algz</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
   </parent>
-  <artifactId>eureka-server-algz1</artifactId>
+  <artifactId>eureka-server-algz</artifactId>
+  
+  <dependencies>
+	  <!-- eureka 服务端-->
+  	<dependency>
+  		<groupId>org.springframework.cloud</groupId>
+  		<artifactId>
+  			spring-cloud-starter-netflix-eureka-server
+  		</artifactId>
+  	</dependency>
+  </dependencies>
+  
+  <!-- 打包。(依赖打包) 解决异常：XXX.jar中没有主清单属性 -->
+  <build>
+    <plugins>
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+        </plugin>
+    </plugins>
+  </build>
+	
 </project>
